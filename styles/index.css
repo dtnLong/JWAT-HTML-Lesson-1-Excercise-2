@@ -31,7 +31,7 @@ button {
     box-shadow: none;
 }
 
-/* HEADER */
+/*#region HEADER */
 header {
     background-color: var(--dark-background-color);
     display: flex;
@@ -59,17 +59,18 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    min-width: 23rem;
-    width: 25%;
+    min-width: 25rem;
+    /* width: 30%; */
 }
 
 .nav-content {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: white;
+    padding-bottom: 0.3rem;
 }
 
 .nav-content:hover {
@@ -93,14 +94,46 @@ nav {
     border: 0.11rem solid white;
     color: white;
     text-decoration: none;
-    padding: 1rem;
+    padding: 1.5rem;
     background-color: var(--dark-background-color);
     z-index: 1;
+    width: fit-content;
 }
 
-.dropdown:hover .nav-dropdown {
-    display: flex;
-    flex-direction: column;
+@media only screen and (min-width: 735px) {
+    .dropdown:hover .nav-dropdown {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.dropdown-overview {
+    color: white;
+    white-space: nowrap;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.dropdown-item {
+    color: white;
+    margin-top: 1.2rem;
+    margin-left: 2.5rem;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 1.1rem;
+}
+
+.dropdown-item.active {
+    color: var(--emphasis-font-color);
+}
+
+.dropdown-overview:hover {
+    color: var(--emphasis-font-color);
+    text-decoration: none;
+}
+
+.dropdown-item:hover {
+    color: var(--emphasis-font-color);
 }
 
 .contact-button {
@@ -121,6 +154,7 @@ nav {
 .menu-button {
     display: none;
 }
+/*#endregion*/
 
 /* BODY */
 .content-body {
@@ -340,68 +374,6 @@ footer {
 }
 
 /* responsive for mobile*/
-@media only screen and (max-width: 900px) {
-    /* BODY */
-    /* Introduction */
-    .introduction {
-        margin-top: 0.5rem;
-        width: 30rem;
-        font-size: 1.2rem;
-    }
-
-    .content-introduction {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .content-introduction iframe {
-        aspect-ratio: 16 / 9;
-        width: 100%;
-        margin-bottom: 1.5rem;
-    }
-
-    .introduction-content-container {
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .introduction {
-        margin-top: 0.5rem;
-        width: 100%;
-        font-size: 1.3rem;
-    }
-
-    /* Card */
-    .card-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        height: fit-content;
-        width: 100%;
-    }
-
-    .card-logo {
-        aspect-ratio: auto;
-        height: 4rem;
-    }
-
-    .card-title {
-        font-size: 1.5rem;
-        padding-top: 1.25rem;
-        height: fit-content;
-        margin-bottom: 1rem;
-    }
-
-    .card-content {
-        font-size: 1.2rem;
-    }
-}
-
-/* responsive for mobile*/
 @media only screen and (max-width: 735px) {
     footer {
         flex-direction: column-reverse;
@@ -440,6 +412,11 @@ footer {
         align-items: center;
         font-size: 1.1rem;
         padding: 1rem 0;
+    }
+
+    .nav-dropdown.active {
+        display: flex;
+        flex-direction: column;
     }
 
     /* .nav-content img {
