@@ -50,7 +50,7 @@ header {
     height: 3rem;
 }
 
-/* Nav content*/
+/*#region Navigation Bar*/
 .nav-menu {
     display: none;
 }
@@ -102,6 +102,7 @@ nav {
     width: fit-content;
 }
 
+/* Hovering over navigation item to display dropdown menu only take effect on screen larger than phone */
 @media only screen and (min-width: 735px) {
     .dropdown:hover .nav-dropdown {
         display: flex;
@@ -137,6 +138,7 @@ nav {
 .dropdown-item:hover {
     color: var(--emphasis-font-color);
 }
+/*#endregion Navigation Bar*/
 
 .contact-button {
     font-weight: bold;
@@ -156,15 +158,15 @@ nav {
 .menu-button {
     display: none;
 }
-/*#endregion*/
+/*#endregion HEADER*/
 
-/* BODY */
+/*#region BODY */
 .content-body {
     margin-top: 5rem;
     padding: 1rem 6%;
 }
 
-/* Introduction */
+/*#region Introduction */
 .content-introduction {
     display: flex;
     flex-direction: row;
@@ -199,8 +201,9 @@ nav {
     width: 30rem;
     font-size: 1.2rem;
 }
+/*#endregion Introduction*/
 
-/* Main content */
+/*#region Main content */
 .main-content-container {
     margin-top: 3rem;
     /* margin-bottom: 1rem; */
@@ -213,7 +216,7 @@ nav {
     align-items: center;
 }
 
-/* Card */
+/*#region Card */
 .card-container {
     margin: 1.5rem 0rem;
     display: grid;
@@ -249,6 +252,8 @@ nav {
 :nth-child(even of div.card) {
     background-color: var(--grey-background-color);
 }
+/*#endregion Card*/
+/*#endregion Main content*/
 
 /* Previous Page */
 .prev-page-title {
@@ -265,8 +270,9 @@ nav {
 .prev-page-text:hover {
     color: #40a9ff;
 }
+/*#endregion BODY*/
 
-/* FOOTER */
+/*#region FOOTER */
 footer {
     display: flex;
     flex-direction: row;
@@ -277,12 +283,6 @@ footer {
 
 .social {
     padding-right: 1.5rem;
-}
-
-.footer-link {
-    padding-left: 2rem;
-    color: black;
-    text-decoration: none;
 }
 
 .social img {
@@ -300,11 +300,18 @@ footer {
     cursor: pointer;
 }
 
+.footer-link {
+    padding-left: 2rem;
+    color: black;
+    text-decoration: none;
+}
+
 .footer-link:hover {
     color: var(--emphasis-font-color);
 }
+/*#endregion FOOTER*/
 
-/* Responsive for tablet*/
+/*#region Responsive for tablet*/
 @media only screen and (max-width: 900px) {
     /* HEADER */
     header {
@@ -351,21 +358,34 @@ footer {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+/*#endregion Responsive for tablet*/
 
-/* responsive for mobile*/
+/*#region Responsive for mobile*/
 @media only screen and (max-width: 735px) {
-    footer {
-        flex-direction: column-reverse;
+    /*Navigation menu button*/
+    .menu-button {
+        display: flex;
         align-items: center;
-        justify-content: center;
-        padding: 2rem 0rem;
+        color: white;
+        padding: 0.2rem;
+        /* transition: all 0.4s ease-in; */
     }
 
-    .social {
-        padding: 0;
-        margin: 1rem;
+    .menu-button img {
+        aspect-ratio: 1;
+        height: 1.5rem;
     }
 
+    .menu-button.active {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        background-color: rgb(107, 107, 107);
+        border: 0.1rem solid white;
+        border-radius: 5px;
+    }
+
+    /*Navigation menu*/
     .nav-menu {
         display: flex;
         flex-direction: column;
@@ -397,6 +417,7 @@ footer {
         flex-direction: column;
     }
 
+    /*Content card*/
     .card-container {
         display: flex;
         flex-direction: column;
@@ -424,6 +445,19 @@ footer {
         font-size: 1.2rem;
     }
 
+    /* Footer */
+    footer {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 0rem;
+    }
+
+    .social {
+        padding: 0;
+        margin: 1rem;
+    }
+
     .link {
         display: flex;
         flex-direction: column;
@@ -436,30 +470,10 @@ footer {
         padding: 0;
         margin-top: 0.7rem;
     }
-
-    .menu-button {
-        display: flex;
-        align-items: center;
-        color: white;
-        padding: 0.2rem;
-        /* transition: all 0.4s ease-in; */
-    }
-
-    .menu-button img {
-        aspect-ratio: 1;
-        height: 1.5rem;
-    }
-
-    .menu-button.active {
-        transform: rotate(90deg);
-        -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        background-color: rgb(107, 107, 107);
-        border: 0.1rem solid white;
-        border-radius: 5px;
-     }
-
+    
+     /*Disabled element*/
     .disabled {
         display: none;
     }
 }
+/*#endregion Responsive for mobile*/

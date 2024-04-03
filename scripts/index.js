@@ -23,8 +23,8 @@ menuButton.addEventListener("click", () => {
 
 
 // Mobile navigation menu controls
-// When a navigation button is click, open that navigation menu and closs all other menu
-// If context menu contain class "active", the context menu will be displayed
+// When a navigation button is click, open that navigation dropdown menu and closs all other dropdown menu
+// If dropdown menu contain class "active", the dropdown menu will be displayed
 solutionsNav.addEventListener("click", () => {
     if (solutionsNavMenu.classList.contains("active")) {
         solutionsNavMenu.classList.remove("active");
@@ -65,7 +65,7 @@ document.addEventListener("click", (e) => {
         return;
     }
 
-    // Close all navigation context menu when click on area outside of context menu and navigation button
+    // Close all navigation context menu when click on area outside of dropdown menu and navigation button
     if (!solutionsNav.contains(e.target) && !servicesNav.contains(e.target) && !careersNav.contains(e.target) &&
             !solutionsNavMenu.contains(e.target) && !servicesNavMenu.contains(e.target) && !careersNavMenu.contains(e.target)) {
         closeAllContextMenu();
