@@ -55,9 +55,12 @@ careersNav.addEventListener("click", () => {
     }
 });
 
-// document.addEventListener("click", (e) => {
-//     if (!navMenu.contains(e.target) && e.target !== menuButton) {
-//         navMenu.classList.add("disabled");
-//         menuButton.classList.remove("active");
-//     }
-// })
+document.addEventListener("click", (e) => {
+    if (!navMenu.contains(e.target) && !menuButton.contains(e.target)) {
+        navMenu.classList.add("disabled");
+        menuButton.classList.remove("active");
+        servicesNavMenu.classList.remove("active");
+        solutionsNavMenu.classList.remove("active");
+        careersNavMenu.classList.remove("active");
+    }
+})
