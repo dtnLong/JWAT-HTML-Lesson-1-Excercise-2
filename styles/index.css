@@ -86,6 +86,8 @@ nav {
 
 .dropdown {
     position: relative;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-dropdown {
@@ -379,7 +381,6 @@ footer {
         display: flex;
         flex-direction: column;
         width: 100%;
-        min-width: 0rem;
     }
 
     .nav-content {
@@ -395,8 +396,6 @@ footer {
         display: flex;
         flex-direction: column;
     }
-
-    
 
     .card-container {
         display: flex;

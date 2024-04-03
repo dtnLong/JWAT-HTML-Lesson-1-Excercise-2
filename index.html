@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
-    <!-- Header -->
+    <!--#region Page Header -->
     <header>
         <img class="logo" src="./assets/logo.png" alt="logo">
+
+        <!--#region Navigation Bar-->
+        <!--Element with disabled tag will be disabled when in mobile-->
         <nav class="disabled">
+            <!--#region Solution menu-->
             <div class="dropdown">
                 <div class="nav-content">
                     Solutions 
@@ -24,6 +28,9 @@
                     <a class="dropdown-item" href="#">Factory</a>
                 </div>
             </div>
+            <!--#endregion-->
+
+            <!--#region Service menu-->
             <div class="dropdown">
                 <div class="nav-content">
                     Services
@@ -36,6 +43,9 @@
                     <a class="dropdown-item active" href="#">Global Service Desk</a>
                 </div>
             </div>
+            <!--#endregion-->
+
+            <!--#region Careers menu-->
             <div class="dropdown">
                 <div class="nav-content">
                     Careers
@@ -47,19 +57,32 @@
                     <a class="dropdown-item" href="#">Fresher Training Program</a>
                 </div>
             </div>
+            <!--#endregion-->
+
             <div class="nav-content">
                 About us
             </div>
         </nav>
+        <!--#endregion-->
+
         <button class="contact-button disabled">Contact us</button>
+
+        <!-- Menu button for mobile-->
         <button class="menu-button" id="menu-button">
             <img src="./assets/menu-icon.svg" alt="Menu">
         </button>
     </header>
 
+    <!--#region Moblie Navigation Menu-->
     <div class="nav-menu disabled" id="nav-menu">
         <button class="contact-button">Contact us</button>
+
         <nav>
+            <div class="nav-content">
+                About us
+            </div>
+
+            <!--#region Solutions menu-->
             <div class="dropdown">
                 <div class="nav-content" id="nav-solutions">
                     Solutions 
@@ -73,6 +96,9 @@
                     <a class="dropdown-item" href="#">Factory</a>
                 </div>
             </div>
+            <!--#endregion-->
+
+            <!--#region Services menu-->
             <div class="dropdown">
                 <div class="nav-content" id="nav-services">
                     Services
@@ -85,6 +111,9 @@
                     <a class="dropdown-item active" href="#">Global Service Desk</a>
                 </div>
             </div>
+            <!--#endregion-->
+
+            <!--#region Careers menu-->
             <div class="dropdown">
                 <div class="nav-content" id="nav-careers">
                     Careers
@@ -96,16 +125,15 @@
                     <a class="dropdown-item" href="#">Fresher Training Program</a>
                 </div>
             </div>
-            <div class="nav-content">
-                About us
-            </div>
+            <!--#endregion-->
         </nav>
     </div>
-    <!-- End of header-->>
+    <!--#endregion-->
+    <!--#endregion-->
 
-    <!-- Body -->
+    <!--#region Page Body -->
     <div class="content-body">
-        <!-- Page introduction -->
+        <!--#region Page introduction -->
         <div class="content-introduction">
             <!-- Youtube video -->
             <iframe 
@@ -119,14 +147,15 @@
                 <div class="introduction">We play the roles as the support frontiers and the representatives of the IT support. The Global Service Desk is the center where customers (e.g. employees or other stakeholders) can approach for help from their IT service providers. Regardless of whatever the assistance is being provided, the goal of our Global Service Desk is to deliver high-quality service to customers in the timely manner.</div>
             </div>
         </div>
+        <!--#endregion-->>
 
-        <!-- Page main content -->
+        <!--#region Page main content -->
         <div class="main-content-container">
             <div class="main-content-title">
                 <span class="title">What <span class="text-emphasis"> we can do</span> </span>
             </div>
 
-            <!--Card container-->
+            <!--#region Card container-->
             <div class="card-container">
                 <div class="card">
                     <div class="card-logo-container">
@@ -176,6 +205,7 @@
                     <div class="card-content">CLV helpdesk's tool is always available with the up to date workaround, training materials, guideline document, FAQ from users... We had a clear plan to make sure that all of helpdesk team members could have the easiest way to reach them in the fastest way when they need to.</div>
                 </div>
             </div>
+            <!--#endregion-->
 
             <!--Previous page-->
             <div class="prev-page-title">Previous page</div>
@@ -184,11 +214,11 @@
             </a>
         </div>
     </div>
-    <!-- End of body -->>
+    <!-- #endregion -->>
 
     <hr>
 
-    <!-- Footer -->
+    <!--#region Footer -->
     <footer>
         <div class="social-link">
             <a href="" class="social">
@@ -208,7 +238,7 @@
             </a>
         </div>
     </footer>
-    <!-- End of Footer-->>
+    <!-- #endregion-->>
     <script src="./scripts/index.js"></script>
 </body>
 </html>
