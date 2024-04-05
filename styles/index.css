@@ -61,9 +61,9 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    min-width: 25rem;
-    max-width: 35rem;
-    width: 30vw;
+    min-width: 27rem;
+    max-width: 32rem;
+    width: 35vw;
 }
 
 .nav-content {
@@ -385,11 +385,6 @@ footer {
     .card:nth-child(4n + 4) img {
         filter: brightness(0) saturate(100%) invert(90%) sepia(100%) saturate(0%) hue-rotate(53deg) brightness(110%) contrast(101%);
     }
-    
-    /* .card:nth-child(6n + 5) {
-        background-color: var(--grey-background-color);
-        color: red;
-    } */
 }
 /*#endregion Responsive for tablet*/
 
