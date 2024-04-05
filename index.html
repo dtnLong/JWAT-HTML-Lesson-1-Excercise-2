@@ -9,11 +9,13 @@
 <body>
     <!--#region Page Header -->
     <header>
-        <img class="logo" src="./assets/logo.png" alt="logo">
+        <a href="#">
+            <img class="logo" src="./assets/logo.png" alt="logo">
+        </a>
 
         <!--#region Navigation Bar-->
-        <!--Element with disabled tag will be disabled when in mobile-->
-        <nav class="disabled">
+        <!--Element with mobile-disabled tag will be mobiel-disabled when in mobile-->
+        <nav class="mobile-disabled">
             <!--#region Solution menu-->
             <div class="dropdown">
                 <div class="nav-content">
@@ -65,7 +67,7 @@
         </nav>
         <!--#endregion Navigation Bar-->
 
-        <button class="contact-button disabled">Contact us</button>
+        <button class="contact-button mobile-disabled">Contact us</button>
 
         <!-- Menu button for mobile-->
         <button class="menu-button" id="menu-button">
@@ -74,7 +76,7 @@
     </header>
 
     <!--#region Mobile Navigation Menu-->
-    <div class="nav-menu disabled" id="nav-menu">
+    <div class="nav-menu mobile-disabled" id="nav-menu">
         <button class="contact-button">Contact us</button>
 
         <nav>
@@ -137,7 +139,7 @@
         <div class="content-introduction">
             <!-- Youtube video -->
             <iframe 
-                src="https://www.youtube.com/embed/lkfI3cpjsII?rel=0" frameBorder="0">
+                src="https://www.youtube.com/embed/lkfI3cpjsII?rel=0&autoplay=1&mute=1" allow='autoplay' frameBorder="0">
             </iframe>
 
             <!-- Introduction content -->

@@ -400,6 +400,7 @@ footer {
     nav {
         display: flex;
         flex-direction: column;
+        min-width: 0rem;
         width: 100%;
     }
 
@@ -410,6 +411,10 @@ footer {
         align-items: center;
         font-size: 1.1rem;
         padding: 1rem 0;
+    }
+
+    .nav-content img {
+        margin-left: 0;
     }
 
     .nav-dropdown.active {
@@ -472,7 +477,7 @@ footer {
     }
     
      /*Disabled element*/
-    .disabled {
+    .mobile-disabled {
         display: none;
     }
 }

@@ -18,7 +18,7 @@ menuButton.addEventListener("click", () => {
     // If menu button have "active" class, the menu button is considered in active state
     // If navigation menu have "disabled" class, the nav menu is hidden
     menuButton.classList.toggle("active");
-    navMenu.classList.toggle("disabled");
+    navMenu.classList.toggle("mobile-disabled");
 })
 
 
@@ -59,7 +59,7 @@ careersNav.addEventListener("click", () => {
 document.addEventListener("click", (e) => {
     // Close all menu when use clicked on area outside of navigation menu
     if (!navMenu.contains(e.target) && !menuButton.contains(e.target)) {
-        navMenu.classList.add("disabled");
+        navMenu.classList.add("mobile-disabled");
         menuButton.classList.remove("active");
         closeAllContextMenu();
         return;
