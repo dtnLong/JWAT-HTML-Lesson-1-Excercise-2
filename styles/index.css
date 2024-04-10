@@ -74,6 +74,7 @@ nav {
     font-weight: 500;
     color: white;
     padding-bottom: 0.3rem;
+    text-decoration: none;
 }
 
 .nav-content:hover {
@@ -285,7 +286,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 4%;
+    padding: 2rem 3rem;
 }
 
 .social {

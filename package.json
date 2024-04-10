@@ -1,0 +1,9 @@
+{
+    "scripts": {
+        "start": "npm run open && nodemon server.js",
+        "open" : "start http://localhost:3000"
+    },
+    "nodemonConfig": {
+        "ext": "js,json,html,css"
+    }
+}

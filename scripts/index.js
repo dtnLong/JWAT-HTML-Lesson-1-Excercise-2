@@ -65,7 +65,7 @@ document.addEventListener("click", (e) => {
         return;
     }
 
-    // Close all navigation context menu when click on area outside of dropdown menu and navigation button
+    // Close all navigation dropdown menu when click on area outside of dropdown menu and navigation button
     if (!solutionsNav.contains(e.target) && !servicesNav.contains(e.target) && !careersNav.contains(e.target) &&
             !solutionsNavMenu.contains(e.target) && !servicesNavMenu.contains(e.target) && !careersNavMenu.contains(e.target)) {
         closeAllContextMenu();
